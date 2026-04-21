@@ -115,7 +115,7 @@ X_pca = pca.fit_transform(X_scaled)
 # ─────────────────────────────────────────────
 print("\n── t-SNE embedding (may take ~30 seconds) ──")
 tsne = TSNE(n_components=2, perplexity=30, learning_rate="auto",
-            init="pca", n_iter=1000, random_state=42)
+            init="pca", max_iter=1000, random_state=42)
 X_tsne = tsne.fit_transform(X_scaled)
 print("── t-SNE embedding computed ──")
 
